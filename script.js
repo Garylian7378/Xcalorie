@@ -15,10 +15,10 @@ async function analyzeFood() {
     result.innerText = "Analyzing food photo...";
 
     try {
-      const response = await fetch("https://api.clarifai.com/v2/models/food-item-recognition/outputs", {
+      const response = await fetch("https://api.clarifai.com/v2/models/food-item-recognition/versions/aa9ca48295b37401f8af92ad1af0d91d/outputs", {
         method: "POST",
         headers: {
-          "Authorization": "3ebfc32885d04842a6ed37ef293db190",
+          "Authorization": "3ebfc32885d04842a6ed37ef293db190", // 👈 replace with your key
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
